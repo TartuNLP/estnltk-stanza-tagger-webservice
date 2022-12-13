@@ -54,5 +54,5 @@ class StanzaSyntaxEnsembleTaggerWorker(Worker):
 if __name__ == "__main__":
     worker = StanzaSyntaxEnsembleTaggerWorker(resources_dir=settings.MODEL_PATH)
     worker.start(connection_parameters=settings.MQ_PARAMS,
-                 service_name=settings.SERVICE_NAME,
+                 service_name="ensemble"+settings.SERVICE_NAME,
                  routing_key=settings.ROUTING_KEY)
